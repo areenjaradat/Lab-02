@@ -1,0 +1,16 @@
+.divClass img{
+    width: 150px;
+    height: 150px;
+    margin-left: 30px;
+    border-radius: 14px;
+}
+
+.divClass h2{
+    font-family: 'Syne Mono', monospace;
+    
+}
+select{
+    position: relative;
+    top: 20px;
+    left: 70px;
+}

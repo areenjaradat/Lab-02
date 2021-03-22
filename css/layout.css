@@ -1,0 +1,22 @@
+header{
+    background-color: blanchedalmond;
+    padding: 100px;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+}
+.divClass{
+    width: 250px;
+    height: 250px;
+    float: left;
+    margin: 20px;
+    border: 2px solid black;
+    text-align: center;
+    background-color:blanchedalmond;
+}
+footer{
+    clear: both;
+    background-color: blanchedalmond;
+    padding: 100px;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+}

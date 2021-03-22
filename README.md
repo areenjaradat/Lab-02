@@ -1,4 +1,5 @@
 # Lab-02
+
 Number and name of feature: Feature #1: Display images
 
 Estimate of time needed to complete: 1hour

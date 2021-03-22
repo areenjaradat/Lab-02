@@ -48,27 +48,6 @@ function getData(){
     })
 
 }
-// $(document).ready(function() {
-
-//     //   $('#photo-template').toggleClass('on');
-//     // $('#photo-template').remove();
-   
-//     // $('select').change(function(){
-// $('select').on('click',function(){
-// //  $('#photo-template').empty();
-//     // $(this).siblings('#photo-template').toggleClass('on');
-   
-//    let theOption= $("select option:selected" ).text();
-
-//     console.log($( "select option:selected" ).text());
-
-//     arrayOfObjects.forEach((element,index)=>{
-//     if (arrayOfObjects[index].keyword===theOption){
-//         arrayOfObjects[index].render();
-//     }
-// });
-// })
-// });
 
 $(document).ready(function() {
     

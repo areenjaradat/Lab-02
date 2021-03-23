@@ -149,11 +149,13 @@ $(document).ready(function() {
         console.log(sortingOption)
        
     let selectedObj=[];
-    // selectedObj=arrayOfObjects;
+    
         // console.log(arrayOfObjects);
+        if(theOption==='Filter by Keyword'){ selectedObj=arrayOfPage1;}
         arrayOfObjects.forEach((element,index)=>{
         if (element.keyword===theOption){
-            selectedObj.push(element);
+            selectedObj[index]=element;
+            console.log(element.keyword)
         }
     })
     console.log(selectedObj)

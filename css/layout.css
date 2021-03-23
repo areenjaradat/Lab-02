@@ -4,14 +4,20 @@ header{
     text-align: center;
     font-family: 'Anton', sans-serif;
 }
-.divClass{
+
+#dataLlist{
+    display: flex;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+}
+ #dataLlist div{
     width: 250px;
     height: 250px;
-    float: left;
     margin: 20px;
     border: 2px solid black;
     text-align: center;
     background-color:blanchedalmond;
+    /* justify-content: space-between; */
 }
 footer{
     clear: both;
@@ -19,4 +25,4 @@ footer{
     padding: 100px;
     text-align: center;
     font-family: 'Anton', sans-serif;
-}
+} 

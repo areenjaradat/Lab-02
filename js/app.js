@@ -68,6 +68,14 @@ function getData(){
             }));
         })
     })
+    $('#sorting').on('change',function() {
+        sortTheContent(arrayOfObjects);
+        arrayOfObjects.forEach((element,index)=>{
+                // console.log("insideds")
+                $('#dataLlist').append(element.renderFunction()) ;
+                
+            })
+    })
 
 }
 
@@ -91,8 +99,16 @@ function getData(){
         })
     
         })
+        $('#sorting').on('change',function() {
+            sortTheContent(arrayOfObjects);
+            $('#dataLlist').empty();
+            arrayOfObjects.forEach((element,index)=>{
+               
+                    $('#dataLlist').append(element.renderFunction()) ;
+        })
         
         })
+    })
 
 $(document).ready(function() {
 
@@ -115,7 +131,14 @@ $(document).ready(function() {
                     text: element
                 }));
             })
-
+            $('#sorting').on('change',function() {
+                sortTheContent(arrayOfPage1);
+                $('#dataLlist').empty();
+                arrayOfPage1.forEach((element,index) => {
+                    // console.log(element)
+                    $('#dataLlist').append(element.renderFunction()) ;
+                });
+            })
            
     })
 
@@ -137,41 +160,54 @@ $(document).ready(function() {
                     text: element
                 }));
             })
-
+            $('#sorting').on('change',function() {
+                sortTheContent(arrayOfPage2);
+                $('#dataLlist').empty();
+                arrayOfPage2.forEach(element => {
+               
+                    $('#dataLlist').append(element.renderFunction()) ;
+                });
+            })
            
     })
 })
-$(document).ready(function() {
+// $(document).ready(function() {
     
-    $('#sorting').on('change',function() {
-        let sortingOption= $("#sorting option:selected" ).text();
-        let theOption= $("#keys option:selected" ).text();
-        console.log(sortingOption)
+//     $('#sorting').on('change',function() {
        
-    let selectedObj=[];
+       
+//         console.log(sortingOption)
+       
+//     let selectedObj=[];
     
-        // console.log(arrayOfObjects);
-        if(theOption==='Filter by Keyword'){ selectedObj=arrayOfPage1;}
-        arrayOfObjects.forEach((element,index)=>{
-        if (element.keyword===theOption){
-            selectedObj[index]=element;
-            console.log(element.keyword)
-        }
-    })
-    console.log(selectedObj)
-    if(sortingOption==='title'){
-        selectedObj.sort((a,b)=> b.title.toLowerCase() > a.title.toLowerCase() ?  -1:  1 );
-    }else if(sortingOption==='horns'){
-        selectedObj.sort((a,b)=>a.horns>b.horns?1:-1);
-    }
+//         // console.log(arrayOfObjects);
+//         if(theOption==='Filter by Keyword'){ selectedObj=arrayOfPage1;}
+//         arrayOfObjects.forEach((element,index)=>{
+//         if (element.keyword===theOption){
+//             selectedObj[index]=element;
+//             console.log(element.keyword)
+//         }
+//     })
+//     console.log(selectedObj)
+    
 
-    $('#dataLlist').empty();
-    selectedObj.forEach(element=>{
-        $('#dataLlist').append(element.renderFunction()) ;
-    })
-    })
+//     $('#dataLlist').empty();
+//     selectedObj.forEach(element=>{
+//         $('#dataLlist').append(element.renderFunction()) ;
+//     })
+//     })
     
-    })
+//     })
+
+
+    function sortTheContent(selectedObj){
+        let sortingOption= $("#sorting option:selected" ).text();
+        if(sortingOption==='title'){
+            selectedObj.sort((a,b)=> b.title.toLowerCase() > a.title.toLowerCase() ?  -1:  1 );
+        }else if(sortingOption==='horns'){
+            selectedObj.sort((a,b)=>a.horns>b.horns?1:-1);
+        }
+    }
 
 function readDataFromPage2(){
 
